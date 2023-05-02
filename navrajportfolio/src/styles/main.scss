@@ -1,0 +1,48 @@
+@import "./abstracts/mixins";
+@import "./abstracts/typography";
+@import "./base/animation";
+
+@import "./components/header";
+@import "./components/card";
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/skills";
+@import "./pages/education";
+@import "./pages/experience";
+@import "./pages/projects";
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(tab-land) {
+    font-size: 56.25%; //1 rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%; //1 rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond(big-desk) {
+    font-size: 75%; //1rem = 12px; 12px/16px = 75%
+  }
+}
+
+body {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #000;
+}

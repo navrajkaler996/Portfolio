@@ -1,0 +1,152 @@
+//PAGE HEADER
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000;
+
+  //NAVIGATION CONTAINER
+  &__navigation {
+    color: #fff;
+    display: flex;
+    justify-content: end;
+    padding: 2rem;
+  }
+
+  //NAVIGATION LINKS CONTAINER
+  &__nav {
+    display: flex;
+    list-style: none;
+  }
+
+  //NAVIGATION LINK
+  &__nav-link {
+    margin: 0 1rem;
+    animation: AnimateNavigation 1s ease-in-out;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+      color: #000;
+    }
+  }
+
+  //WELCOME TEXT CONTAINER
+  &__welcome {
+    width: 70rem;
+    height: 18rem;
+    max-height: 50rem;
+    border: 1px solid transparent;
+    display: block;
+    margin-top: 10rem;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    font-family: "Source Code Pro";
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: none;
+    box-shadow: 0px 0px 10px #14eacfff, 0px 0px 10px #14eacfff;
+    animation: AnimateBox 1s;
+  }
+
+  &__line {
+    position: relative;
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    white-space: nowrap;
+    margin: 0 auto;
+    overflow: hidden;
+
+    &--1 {
+      width: 16em;
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    &--2 {
+      width: 26.5em;
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+    }
+
+    &--3 {
+      width: 27.8em;
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+    }
+
+    &--4 {
+      width: 23.8em;
+      font-size: 1.1em;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__typing {
+    &--1 {
+      animation: AnimateTyping1 2s steps(44) 1s 1 normal both,
+        AnimateBlinkCursor 500ms steps(44) infinite normal;
+    }
+
+    &--2 {
+      animation: AnimateTyping2 2s steps(44) 0.1s 1 normal both,
+        AnimateBlinkCursor 500ms steps(44) infinite normal;
+    }
+
+    &--3 {
+      animation: AnimateTyping3 2s steps(44) 0.1s 1 normal both,
+        AnimateBlinkCursor 500ms steps(44) infinite normal;
+    }
+    &--4 {
+      animation: AnimateTyping4 2s steps(44) 0.1s 1 normal both,
+        AnimateBlinkCursor 500ms steps(44) infinite normal;
+    }
+  }
+
+  &__button {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: none;
+    margin-top: 10rem;
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 10px #14eacfff, 0px 0px 10px #14eacfff;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.2s;
+    z-index: 100;
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: 0px 0px 40px #14eacfff, 0px 0px 40px #14eacfff;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+    }
+  }
+}
+
+// .connection {
+//   height: 32%;
+//   width: 1px;
+//   background-color: #14eacfff;
+//   margin-top: 10rem;
+//   position: absolute;
+//   top: calc(50% + 15rem);
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   left: 0;
+//   right: 0;
+//   box-shadow: 0px 0px 10px #14eacfff, 0px 0px 10px #14eacfff;
+//   z-index: 1;
+// }
