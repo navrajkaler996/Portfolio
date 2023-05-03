@@ -1,5 +1,3 @@
-import React from 'react'
-
 const CardEducationContent = () => {
   return (
     <div className="card__content--education">

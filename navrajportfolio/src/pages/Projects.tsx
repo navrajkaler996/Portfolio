@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Card from '../components/Card'
 
 const Projects = () => {
@@ -6,7 +6,7 @@ const Projects = () => {
     <>
     <div id="projects"></div>
     <div className="projects">
-      <Card heading="Projects"/>
+      <Card heading="Projects" handleClick={() => {}}/>
     </div>
     </>
   )

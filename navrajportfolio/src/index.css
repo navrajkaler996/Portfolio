@@ -251,7 +251,7 @@ big-desk
 }
 .card__down-arrow {
   width: 8rem;
-  height: 8rem;
+  height: 6rem;
 }
 .card__content {
   display: grid;
