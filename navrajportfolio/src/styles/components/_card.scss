@@ -22,6 +22,7 @@
     align-items: center;
     font-size: 1.2em;
     letter-spacing: 4px;
+    z-index: 10;
   }
 
   &__go-down {
@@ -43,7 +44,7 @@
     letter-spacing: 4px;
     border-radius: 50%;
     transition: all 0.2s;
-
+    z-index: 10;
     &:hover {
       cursor: pointer;
 
@@ -146,10 +147,17 @@
         border: 1px solid #fff;
         background-color: #fff;
         padding: 1rem;
-        padding-top: 3rem;
+
         text-align: center;
         border-radius: 1rem;
         font-size: 0.9em;
+
+        & span.know-more {
+          color: #0000ee;
+          &:hover {
+            cursor: pointer;
+          }
+        }
       }
 
       & > p.first {
@@ -234,5 +242,82 @@
         }
       }
     }
+  }
+
+  &__experience-details {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    animation: ExpandExperience 1s;
+    z-index: 1;
+    color: #000;
+
+    &--down {
+      top: 0;
+
+      & div {
+        animation: ExpandDetails1 1s;
+        margin-top: 0;
+      }
+    }
+    &--top {
+      bottom: 0;
+      & div {
+        animation: ExpandDetails2 1s;
+        margin-bottom: 0;
+      }
+    }
+
+    & div {
+      padding: 6rem;
+      box-sizing: border-box;
+    }
+
+    & p {
+      margin: 0;
+      margin-bottom: 1rem;
+      text-transform: none;
+    }
+
+    & ul li {
+      margin: 1rem 0 0 2rem;
+      text-transform: none;
+    }
+
+    & p.description {
+      font-size: 0.9em;
+    }
+  }
+}
+
+@keyframes ExpandExperience {
+  0% {
+    height: 0%;
+  }
+
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes ExpandDetails1 {
+  0% {
+    margin-top: -500px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes ExpandDetails2 {
+  0% {
+    margin-bottom: -500px;
+  }
+
+  100% {
+    margin-bottom: 0;
   }
 }
