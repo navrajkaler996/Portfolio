@@ -15,7 +15,7 @@ const Card = ({heading, handleClick}: CardProps) => {
         {heading === "skills" && <CardSkillsContent />}
         {heading === "education" && <CardEducationContent />}
         {heading === "experience" && <CardExperienceContent />}
-        <div className="card__go-down" onClick={handleClick}>
+        <div className="card__go-down" onClick={() => handleClick()}>
           <img src={DownArrow} className="card__down-arrow" />
         </div>
     </div>

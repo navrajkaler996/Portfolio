@@ -1,4 +1,3 @@
-import React from 'react'
 import SassLogo from "../assets/sass.png";
 import ReactLogo from "../assets/physics.png";
 import CSSLogo from "../assets/css-3.png";

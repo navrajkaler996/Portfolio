@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react"
+import {  useState } from "react"
 
 
 const CardExperienceContent = () => {
 
   const [style, setStyle] = useState("")
 
-  // useEffect(()=> {
 
-  //   setTimeout(() => {
-
-  //     setStyle("card__experience-details")
-      
-  //   }, 5000);
-
-  // },[])
   return (
     <div className="card__content--experience">
 
