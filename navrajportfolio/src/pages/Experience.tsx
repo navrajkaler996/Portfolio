@@ -11,7 +11,7 @@ const Experience = () => {
     <>
     <div id="experience"></div>
     <div className="experience">
-      <Card heading="Experience" handleClick={handleClick}/>
+      <Card heading="experience" handleClick={handleClick}/>
     </div>
     </>
   )

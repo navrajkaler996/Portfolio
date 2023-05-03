@@ -261,6 +261,16 @@ big-desk
 .card__content img {
   width: 7rem;
 }
+.card__content--education {
+  display: flex;
+  justify-content: center;
+}
+.card__content--experience {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .card__image-holder {
   display: flex;
   flex-direction: column;
@@ -270,10 +280,124 @@ big-desk
 .card__image-holder span {
   margin-top: 2rem;
 }
-.card__streak {
-  height: 100%;
+.card__hr-line {
+  height: 40rem;
   background-color: #fff;
-  width: 1rem;
+  width: 0.2rem;
+  margin-left: -30rem;
+  margin-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card__hr-line-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: -2rem;
+  position: relative;
+}
+.card__hr-line-circle span {
+  position: absolute;
+  color: #fff;
+  left: 100%;
+  width: 50rem;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+.card__vt-line {
+  height: 0.2rem;
+  width: 90%;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.card__vt-line-circle {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: -2rem;
+  position: relative;
+}
+.card__vt-line-circle > p {
+  position: absolute;
+  width: 20rem;
+  height: 10rem;
+  border: 1px solid #fff;
+  background-color: #fff;
+  padding: 1rem;
+  padding-top: 3rem;
+  text-align: center;
+  border-radius: 1rem;
+  font-size: 0.9em;
+}
+.card__vt-line-circle > p.first {
+  bottom: 100%;
+  margin-bottom: 2rem;
+}
+.card__vt-line-circle > p.first::after {
+  content: "";
+  position: absolute;
+  top: 97%;
+  left: 0%;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+.card__vt-line-circle > p.first > span {
+  font-size: 0.9em;
+}
+.card__vt-line-circle > p.second {
+  top: 100%;
+  right: 0%;
+  margin-top: 2rem;
+}
+.card__vt-line-circle > p.second::after {
+  content: "";
+  position: absolute;
+  bottom: 97%;
+  right: 0%;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+.card__vt-line-circle > p.second > span {
+  font-size: 0.9em;
+}
+.card__vt-line-circle > p.third {
+  top: 100%;
+  margin-top: 2rem;
+}
+.card__vt-line-circle > p.third::after {
+  content: "";
+  position: absolute;
+  bottom: 97%;
+  left: 0%;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-color: transparent transparent #fff transparent;
+}
+.card__vt-line-circle > p.third > span {
+  font-size: 0.9em;
+}
+.card__vt-line-circle > p.forth {
+  bottom: 100%;
+  margin-bottom: 2rem;
+  right: 0;
+}
+.card__vt-line-circle > p.forth::after {
+  content: "";
+  position: absolute;
+  top: 97%;
+  right: 0%;
+  border-width: 1.5rem;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+.card__vt-line-circle > p.forth > span {
+  font-size: 0.9em;
 }
 
 .home {
