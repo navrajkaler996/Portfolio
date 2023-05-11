@@ -42,12 +42,23 @@ big-desk
     width: 16em;
   }
 }
+@keyframes AnimateTyping1ForPhone {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16.5em;
+  }
+}
 @keyframes AnimateTyping2 {
   from {
     width: 0;
   }
   to {
     width: 28em;
+    @media (max-width: 37.5em) {
+      width: 26em;
+    }
   }
 }
 @keyframes AnimateTyping3 {
@@ -56,6 +67,14 @@ big-desk
   }
   to {
     width: 29em;
+  }
+}
+@keyframes AnimateTyping3ForPhone {
+  from {
+    width: 0;
+  }
+  to {
+    width: 29.5em;
   }
 }
 @keyframes AnimateTyping4 {
@@ -128,6 +147,17 @@ big-desk
   box-shadow: 0px 0px 10px #14eacf, 0px 0px 10px #14eacf;
   animation: AnimateBox 1s;
 }
+@media (max-width: 37.5em) {
+  .header__welcome {
+    width: fit-content;
+  }
+}
+@media (max-width: 25em) {
+  .header__welcome {
+    width: fit-content;
+    font-size: 0.8em;
+  }
+}
 .header__line {
   position: relative;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
@@ -159,11 +189,21 @@ big-desk
 .header__typing--1 {
   animation: AnimateTyping1 2s steps(44) 1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
 }
+@media (max-width: 37.5em) {
+  .header__typing--1 {
+    animation: AnimateTyping1ForPhone 2s steps(44) 1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
+  }
+}
 .header__typing--2 {
   animation: AnimateTyping2 2s steps(44) 0.1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
 }
 .header__typing--3 {
   animation: AnimateTyping3 2s steps(44) 0.1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
+}
+@media (max-width: 37.5em) {
+  .header__typing--3 {
+    animation: AnimateTyping3ForPhone 2s steps(44) 0.1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
+  }
 }
 .header__typing--4 {
   animation: AnimateTyping4 2s steps(44) 0.1s 1 normal both, AnimateBlinkCursor 500ms steps(44) infinite normal;
@@ -202,6 +242,12 @@ big-desk
   box-shadow: 0px 0px 10px #14eacf, 0px 0px 10px #14eacf;
   position: relative;
   z-index: 100;
+}
+@media (max-width: 37.5em) {
+  .card {
+    height: max-content;
+    width: 95%;
+  }
 }
 .card__heading {
   width: 20rem;
@@ -260,6 +306,11 @@ big-desk
   margin: 8rem 0;
   z-index: 100;
 }
+@media (max-width: 37.5em) {
+  .card__content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .card__content img {
   width: 7rem;
 }
@@ -267,11 +318,28 @@ big-desk
   display: flex;
   justify-content: center;
 }
+@media (max-width: 37.5em) {
+  .card__content--education {
+    justify-content: flex-start;
+    margin-bottom: 12rem;
+  }
+}
 .card__content--experience {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.card__content--contactme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+}
+.card__content--contactme h1 {
+  margin-top: 7rem;
 }
 .card__image-holder {
   display: flex;
@@ -292,6 +360,11 @@ big-desk
   flex-direction: column;
   justify-content: space-between;
 }
+@media (max-width: 37.5em) {
+  .card__hr-line {
+    margin-left: 5rem;
+  }
+}
 .card__hr-line-circle {
   width: 4rem;
   height: 4rem;
@@ -304,9 +377,23 @@ big-desk
   position: absolute;
   color: #fff;
   left: 100%;
-  width: 50rem;
+  width: 48rem;
   margin-left: 1rem;
   margin-top: 0.5rem;
+}
+@media (max-width: 37.5em) {
+  .card__hr-line-circle span {
+    width: 38rem;
+  }
+}
+@media (max-width: 25em) {
+  .card__hr-line-circle span {
+    width: 30rem;
+  }
+}
+.card__hr-line-circle span:last-of-type {
+  margin-top: 6rem;
+  font-size: 0.8em;
 }
 .card__vt-line {
   height: 0.2rem;
@@ -464,6 +551,55 @@ big-desk
 .card__experience-details p.description {
   font-size: 0.9em;
 }
+.card__form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 56.25em) {
+  .card__form {
+    grid-template-columns: 1fr;
+  }
+}
+.card__form div {
+  margin-left: 2rem;
+  text-align: left;
+}
+.card__form p {
+  margin-top: 2rem;
+}
+.card__form p input {
+  width: 40rem;
+  height: 4rem;
+  border-radius: 3rem;
+  padding-left: 2rem;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+}
+@media (max-width: 56.25em) {
+  .card__form p input {
+    box-sizing: border-box;
+  }
+}
+.card__form p input[type=submit] {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.card__form p input[type=submit]:hover {
+  cursor: pointer;
+}
+.card__form p label {
+  margin-bottom: 10rem;
+}
+.card__form p textarea {
+  border-radius: 3rem;
+  padding-left: 2rem;
+  padding-top: 1rem;
+  outline: none;
+  border: none;
+  margin-top: 1rem;
+}
 
 @keyframes ExpandExperience {
   0% {
@@ -528,6 +664,17 @@ big-desk
   margin-top: 10rem;
   z-index: 100;
 }
+@media (max-width: 37.5em) {
+  .skills {
+    height: auto;
+  }
+}
+
+@media (max-width: 37.5em) {
+  #education {
+    margin-top: 25rem;
+  }
+}
 
 .education {
   display: flex;
@@ -535,6 +682,11 @@ big-desk
   width: 100%;
   height: 100vh;
   margin-top: 10rem;
+}
+@media (max-width: 37.5em) {
+  .education {
+    height: auto;
+  }
 }
 
 .experience {
@@ -550,7 +702,16 @@ big-desk
   justify-content: center;
   width: 100%;
   height: 100vh;
-  margin: 10rem 0;
+  margin-top: 10rem;
+}
+
+.contactme {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: 10rem;
+  z-index: 100;
 }
 
 *,

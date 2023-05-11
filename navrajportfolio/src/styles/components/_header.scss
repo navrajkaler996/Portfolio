@@ -48,6 +48,15 @@
     text-transform: none;
     box-shadow: 0px 0px 10px #14eacfff, 0px 0px 10px #14eacfff;
     animation: AnimateBox 1s;
+
+    @include respond(phone) {
+      width: fit-content;
+    }
+
+    @include respond(phone-small) {
+      width: fit-content;
+      font-size: 0.8em;
+    }
   }
 
   &__line {
@@ -87,6 +96,11 @@
     &--1 {
       animation: AnimateTyping1 2s steps(44) 1s 1 normal both,
         AnimateBlinkCursor 500ms steps(44) infinite normal;
+
+      @include respond(phone) {
+        animation: AnimateTyping1ForPhone 2s steps(44) 1s 1 normal both,
+          AnimateBlinkCursor 500ms steps(44) infinite normal;
+      }
     }
 
     &--2 {
@@ -97,6 +111,11 @@
     &--3 {
       animation: AnimateTyping3 2s steps(44) 0.1s 1 normal both,
         AnimateBlinkCursor 500ms steps(44) infinite normal;
+
+      @include respond(phone) {
+        animation: AnimateTyping3ForPhone 2s steps(44) 0.1s 1 normal both,
+          AnimateBlinkCursor 500ms steps(44) infinite normal;
+      }
     }
     &--4 {
       animation: AnimateTyping4 2s steps(44) 0.1s 1 normal both,

@@ -8,7 +8,7 @@ const Education = () => {
   }
   return (
     <>
-    <div id="education"> </div>
+    <div id="education"> &nsbp; </div>
     <div className="education">
       <Card heading="education" handleClick={handleClick}/>
     </div>

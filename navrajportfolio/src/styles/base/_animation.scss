@@ -32,12 +32,24 @@
   }
 }
 
+@keyframes AnimateTyping1ForPhone {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16.5em;
+  }
+}
+
 @keyframes AnimateTyping2 {
   from {
     width: 0;
   }
   to {
     width: 28em;
+    @include respond(phone) {
+      width: 26em;
+    }
   }
 }
 
@@ -47,6 +59,15 @@
   }
   to {
     width: 29em;
+  }
+}
+
+@keyframes AnimateTyping3ForPhone {
+  from {
+    width: 0;
+  }
+  to {
+    width: 29.5em;
   }
 }
 
@@ -72,8 +93,6 @@
     padding: 2rem 0;
   }
 }
-
-
 
 @keyframes AnimateConnection {
   0% {

@@ -1,5 +1,6 @@
 
 import DownArrow from "../assets/down-arrow.png";
+import CardContactMeContent from "./CardContactMeContent";
 import CardEducationContent from "./CardEducationContent";
 import CardExperienceContent from "./CardExperienceContent";
 import CardSkillsContent from "./CardSkillsContent";
@@ -15,6 +16,7 @@ const Card = ({heading, handleClick}: CardProps) => {
         {heading === "skills" && <CardSkillsContent />}
         {heading === "education" && <CardEducationContent />}
         {heading === "experience" && <CardExperienceContent />}
+        {heading === "contact me" && <CardContactMeContent />}
         <div className="card__go-down" onClick={() => handleClick()}>
           <img src={DownArrow} className="card__down-arrow" />
         </div>

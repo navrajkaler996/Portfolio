@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header'
+import ContactMe from './pages/ContactMe'
 import Education from './pages/Education'
 import Experience from './pages/Experience'
 
@@ -11,14 +12,15 @@ function App() {
 
 
   return (
-    <>
+    <div id="wrapper">
       <Header />
       <Skills />
       <Education />
-      <Experience />
+      {/* <Experience />
       <Projects />
+      <ContactMe /> */}
 
-    </>
+    </div>
   )
 }
 
